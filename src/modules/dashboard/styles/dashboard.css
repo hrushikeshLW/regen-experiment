@@ -1,0 +1,176 @@
+/* Dashboard Fullscreen Layout */
+.dashboard-fullscreen {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.dashboard-grid {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Widget Hover Fix - Prevent Flickering */
+.dashboard-widget {
+  position: relative;
+}
+
+.widget-options-container {
+  position: relative;
+  z-index: 10;
+}
+
+.widget-options-button {
+  pointer-events: auto;
+}
+
+.widget-options-dropdown {
+  z-index: 1050;
+}
+
+/* Ant Design Card Header Fix */
+.dashboard-widget .ant-card-head {
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard-widget .ant-card-extra {
+  position: relative;
+  z-index: 10;
+}
+
+/* Modern Share Menu Styles */
+.modern-share-menu {
+  min-width: 220px;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.modern-share-menu .ant-dropdown-menu-item {
+  padding: 8px 12px !important;
+  margin: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.share-menu-item {
+  padding: 0 !important;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* WhatsApp Styles */
+.modern-share-menu .ant-dropdown-menu-item:has(.whatsapp-item) {
+  border-left: 3px solid transparent;
+}
+
+.modern-share-menu .ant-dropdown-menu-item:has(.whatsapp-item):hover {
+  background-color: rgba(37, 211, 102, 0.1) !important;
+  border-left-color: #25d366 !important;
+  transform: translateX(4px);
+}
+
+/* Email Styles */
+.modern-share-menu .ant-dropdown-menu-item:has(.email-item) {
+  border-left: 3px solid transparent;
+}
+
+.modern-share-menu .ant-dropdown-menu-item:has(.email-item):hover {
+  background-color: rgba(234, 67, 53, 0.1) !important;
+  border-left-color: #ea4335 !important;
+  transform: translateX(4px);
+}
+
+/* Telegram Styles */
+.modern-share-menu .ant-dropdown-menu-item:has(.telegram-item) {
+  border-left: 3px solid transparent;
+}
+
+.modern-share-menu .ant-dropdown-menu-item:has(.telegram-item):hover {
+  background-color: rgba(0, 136, 204, 0.1) !important;
+  border-left-color: #0088cc !important;
+  transform: translateX(4px);
+}
+
+/* Share Label Styles */
+.share-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.modern-share-menu .ant-dropdown-menu-item:hover .share-label {
+  color: #000;
+  font-weight: 600;
+}
+
+/* react-share Icon Styles */
+.share-menu-item svg {
+  transition: transform 0.2s ease;
+}
+
+.modern-share-menu .ant-dropdown-menu-item:hover .share-menu-item svg {
+  transform: scale(1.1);
+}
+
+/* Menu Item Selected State */
+.modern-share-menu .ant-dropdown-menu-item-selected {
+  background-color: transparent;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    padding: 16px;
+  }
+
+  .modern-share-menu {
+    min-width: 180px;
+  }
+
+  .share-menu-item {
+    padding: 10px 12px !important;
+  }
+}
+
+/* Smooth Scrolling */
+.dashboard-grid {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Dashboard Grid */
+.dashboard-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-grid::-webkit-scrollbar-track {
+  background: #f0f2f5;
+}
+
+.dashboard-grid::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 4px;
+}
+
+.dashboard-grid::-webkit-scrollbar-thumb:hover {
+  background: #8c8c8c;
+}

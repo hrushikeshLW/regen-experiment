@@ -1,0 +1,161 @@
+/* Share Modal Styles */
+.share-modal .ant-modal-content {
+  background-color: #f5f0e8;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.share-modal .ant-modal-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding-bottom: 16px;
+}
+
+.share-modal .ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.share-modal .ant-modal-close {
+  top: 20px;
+  right: 20px;
+  color: #333;
+}
+
+.share-modal .ant-modal-close:hover {
+  color: #000;
+}
+
+.share-modal .ant-modal-body {
+  padding: 0;
+}
+
+/* Share Modal Content */
+.share-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.share-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Social Media Icons Container */
+.share-icons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.share-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.share-button {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.share-button:hover {
+  transform: scale(1.1);
+}
+
+.share-button:active {
+  transform: scale(0.95);
+}
+
+/* Custom Email Icon Wrapper */
+.custom-email-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Copy Link Section */
+.copy-link-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.share-url-input {
+  flex: 1;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.share-url-input:hover,
+.share-url-input:focus {
+  border-color: #1890ff;
+}
+
+.copy-button {
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.copy-button:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.copy-button:active {
+  background-color: #096dd9;
+  border-color: #096dd9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .share-icons-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .share-modal .ant-modal-content {
+    padding: 16px;
+  }
+
+  .share-icons-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px 8px;
+  }
+
+  .share-icon-wrapper svg {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .copy-link-section {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .copy-button {
+    width: 100%;
+  }
+}
