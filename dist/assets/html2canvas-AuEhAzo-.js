@@ -1,0 +1,1 @@
+import{t as e}from"./index-Dqo1_MIQ.js";export default e();
